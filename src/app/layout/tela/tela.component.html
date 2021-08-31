@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="sidebar">
+    <div mat-card-avatar class="header-image">
+      <img [src]="'assets/images/logo.png'" alt="image" height="150px" width="150">
+    </div>
+    <div class="sidebar2">
+      <button class="button" mat-raised-button color="primary">Inicio > </button>
+      <button class="button" mat-raised-button color="primary">Meus dados > </button>
+      <button class="button" mat-raised-button color="primary">Segurança ></button>
+      <button class="button" mat-raised-button color="primary">Notificação ></button>
+      <button class="button" mat-raised-button color="primary">Configurar conta></button>
+    </div>
+    <a class="exit-button" mat-raised-button color="primary" href="https://www.google.com/" target="_blank">Sair</a>
+  </div>
+
+  <div class="content-1">
+    <mat-card-header class="test">
+      <mat-card-content class="Saudacao"> Olá João, seja bem-vindo!  </mat-card-content>
+    </mat-card-header>
+
+    <mat-card-content class="button-cont">
+      <div align="center">
+        <button class="tam" mat-raised-button mat-icon-button color="primary" >
+          <mat-icon class="tam2">attach_money</mat-icon>
+          <p class="p">Saldo</p>
+        </button>
+
+        <button class="tam" mat-raised-button mat-icon-button color="primary" >
+          <mat-icon class="tam2">call_made</mat-icon>
+          <p class="p">Transferência</p>
+        </button>
+
+        <button class="tam" mat-raised-button mat-icon-button color="primary" >
+          <mat-icon class="tam2">receipt</mat-icon>
+          <p class="p">Extrato</p>
+        </button>
+      </div>
+    </mat-card-content>
+
+    <div class="dado">
+      <mat-card-content class="dado">
+        <mat-card-title class="tit">Meus dados</mat-card-title>
+        <mat-card-content>
+          <p class="desc">Agência:</p>
+          <p class="desc">Conta:</p>
+        </mat-card-content>
+      </mat-card-content>
+    </div>
+
+  </div>
+</div>

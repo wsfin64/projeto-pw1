@@ -1,0 +1,56 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Joao",
+      "cpf": "123456",
+      "idade": 28,
+      "email": "joao@gmail.com",
+      "endereco": "Rua 1",
+      "senha": "123"
+    },
+    {
+      "id": 2,
+      "nome": "Maria",
+      "cpf": "321654",
+      "idade": 20,
+      "email": "maria@gmail.com",
+      "endereco": "Rua 1",
+      "senha": "321"
+    },
+    {
+      "id": 3,
+      "nome": "Pedro",
+      "cpf": "1234654",
+      "idade": 21,
+      "email": "pedro@gmail.com",
+      "endereco": "Rua 4",
+      "senha": "123"
+    },
+    {
+      "id": 4,
+      "nome": "Joana",
+      "cpf": "321654",
+      "idade": 19,
+      "email": "joana@gmail.com",
+      "endereco": "Rua 10",
+      "senha": "3218"
+    },
+    {
+      "email": "teste@gmail.com",
+      "nome": "Radar",
+      "cpf": "123",
+      "idade": "2",
+      "senha": "123",
+      "id": 5
+    },
+    {
+      "email": "alice@gmail.com",
+      "nome": "Alice",
+      "cpf": "456789",
+      "idade": "25",
+      "senha": "65487",
+      "id": 6
+    }
+  ]
+}

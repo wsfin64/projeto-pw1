@@ -1,0 +1,106 @@
+.container {
+  display: grid;
+  height: 655px;
+  grid-template-columns: 200px 1fr 1fr;
+  grid-template-rows: 80px 1fr 1fr 100px;
+  padding: 0;
+}
+
+.sidebar {
+  grid-row: 1 / 8;
+  grid-column: 1 / 2;
+  background-color: rgb( 14, 11, 22);
+}
+
+.content-1 {
+  grid-row: 1/ 8;
+  grid-column: 2 / 4;
+  background-color: rgba(23, 23, 28, 0.73);
+}
+
+.example-header-image {
+  background-size: cover;
+}
+
+.sidebar2 {
+  display: inline-block ;
+  margin-block: auto;
+  font-size: 14px;
+  min-width: 120px;
+  margin-right: auto;
+  margin-top: 100px;
+
+}
+
+.button{
+  display: table-cell;
+  justify-content: center;
+  width: 200px;
+  margin-top: 2px;
+  padding-top: 5px;
+
+}
+
+.exit-button{
+  margin-top: 60px;
+  margin-left: 55px;
+
+}
+.button-cont{
+  font-size: 200px;
+  justify-content: space-between;
+  width: 10px;
+  margin-top: 50px;
+
+}
+
+.tam{
+  margin-top: 140px;
+  width: 80px;
+  height: 80px;
+  border-radius: 100px;
+  margin-right: 150px;
+  margin-left: 55px;
+
+}
+
+.tam2{
+  font-size: 40px;
+  align-items: center;
+  margin-top: 30px;
+  margin-right: 10px;
+}
+.Saudacao{
+  padding-top: 1000px;
+  padding-left: 40px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 100px;
+
+
+}
+.test{
+  margin-top: 100px;
+}
+.p{
+  text-align: center;
+  margin-top: 50px;
+  font-size: 15px;
+}
+.dado{
+  margin-top: 130px;
+  margin-bottom: 50px;
+  background-color: rgba(96, 0, 196, 0.35);
+  margin-left: 40px;
+  margin-right: 60px;
+  padding-top: 20px;
+}
+
+.mat-card-title{
+  padding-left: 1px;
+  margin-left: 1px;
+}
+.desc{
+  padding-top: 10px;
+  padding-left: 9px;
+}

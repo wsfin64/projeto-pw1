@@ -1,0 +1,75 @@
+/*  Menu   */
+.menu{
+  background-color: rgb( 14, 11, 22) ;
+  background-size: cover;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.example-icon{
+  font-size: 5px;
+  margin-left: 1150px;
+  display: table-cell;
+}
+
+
+/* Imagem   */
+.mat-card-inicial{
+  background-color: lavender;
+  margin-bottom: 10px;
+}
+
+.mat-card-image {
+  background-image: url('https://pulsamerica.co.uk/wp-content/uploads/2021/02/irish-tech.jpg');
+  background-size: auto;
+  max-height: 250px;
+  margin-bottom: 100px}
+
+
+ /* Inputs */
+.mat-form-principal{
+  margin-left: 5px;
+}
+
+/*.mat-form-input{
+  margin-left: 280px;
+}*/
+.mat-form-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 400px;
+}
+
+.mat-card-title{
+  font-family: Courier New ;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+
+/*Botão*/
+
+.mat-card-spacer{
+  margin-left: 575px;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+/* Resultado*/
+.mat-card-simples{
+  max-width: 300px;
+  background-color: aliceblue;
+  margin-top: 10px;
+}
+
+
+
+
+.mat-card-icon{
+  margin-right: 10px;
+}
+
+

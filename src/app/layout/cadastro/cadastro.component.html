@@ -1,0 +1,65 @@
+<!--Menu-->
+<div class="menu">
+    <button mat-icon-button class="example-icon2" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Cadastro</span>
+    <span class="example-spacer"></span>
+  <button mat-icon-button color="primary" class="example-icon" aria-label="Example icon button with a home icon">
+    <mat-icon>logout</mat-icon>
+    </button>
+</div>
+
+
+<!-- Cadastro -->
+
+<mat-card class="mat-card-inicial" >
+
+
+  <mat-card-header >
+    <mat-card-content class="mat-form-input" align="center">
+      <mat-card-title class="mat-card-title">Cadastro de usuarios</mat-card-title>
+      <br>
+      <mat-form-field appearance="fill" class="mat-form-principal">
+        <mat-label>Nome</mat-label>
+        <input matInput [(ngModel)]="usuario.nome" placeholder="digite o nome">
+        <mat-icon matSuffix>create</mat-icon>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="mat-form-principal">
+        <mat-label>CPF</mat-label>
+        <input matInput [(ngModel)]="usuario.cpf" placeholder="000.000.000-00">
+        <mat-icon matSuffix>create</mat-icon>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="mat-form-principal">
+        <mat-label>Idade</mat-label>
+        <input matInput [(ngModel)]="usuario.idade" placeholder="digite a idade">
+        <mat-icon matSuffix>create</mat-icon>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="mat-form-field">
+        <mat-label>Enter your email</mat-label>
+        <input matInput [(ngModel)]="usuario.email" placeholder="pat@example.com" [formControl]="email" required>
+        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        <mat-icon matSuffix>create</mat-icon>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="mat-form-field">
+        <mat-label>Enter your password</mat-label>
+        <input matInput [(ngModel)]="usuario.senha" [type]="hide ? 'password' : 'text'">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+
+
+
+<!-- Botão -->
+    </mat-card-content>
+  </mat-card-header>
+  <mat-card-footer class="mat-card-spacer">
+    <button mat-raised-button color="primary" (click)="inserirUsuario()" [routerLink]="['/listarusuarios']">Enviar</button>
+  </mat-card-footer>
+</mat-card>
+

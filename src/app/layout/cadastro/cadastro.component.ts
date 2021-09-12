@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Usuario} from "../../shared/model/usuario";
 import {FormControl, Validators} from "@angular/forms";
-import {UsuarioService} from "../../shared/services/usuario.service";
+import {UsuarioFirestoreService} from "../../shared/services/usuario-firestore.service";
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'app-cadastro',
@@ -10,11 +11,25 @@ import {UsuarioService} from "../../shared/services/usuario.service";
 })
 export class CadastroComponent {
   usuario: Usuario;
+  operacaoCadastro = true;
+
   hide = true;
 
 
-  constructor(private usuarioService: UsuarioService) {
+  constructor(private usuarioFirestoreService: UsuarioFirestoreService, private rotaAtual: ActivatedRoute, private roteador: Router) {
     this.usuario = new Usuario();
+
+    if (this.rotaAtual.snapshot.paramMap.has('id')){
+      this.operacaoCadastro = false;
+      const idParaEdicao = this.rotaAtual.snapshot.paramMap.get('id');
+      this.usuarioFirestoreService.pesquisarPorId(<string>idParaEdicao).subscribe(
+        usuarioRetornado => this.usuario = usuarioRetornado
+      )
+    }
+
+  }
+
+  ngOnInit(): void {
 
   }
 
@@ -29,9 +44,18 @@ export class CadastroComponent {
   }
 
   inserirUsuario(): void {
-    this.usuarioService.inserir(this.usuario).subscribe(
-      usuario => console.log(usuario)
-    );
-    this.usuario = new Usuario();
+    if (this.usuario.id){
+      this.usuarioFirestoreService.atualizar(this.usuario).subscribe(
+        usuarioAlterado => {
+          this.roteador.navigate(['listarusuarios'])
+        }
+      );
+    } else {
+      this.usuarioFirestoreService.inserir(this.usuario).subscribe(
+        usuarioInserido => {
+          this.roteador.navigate(['listarusuarios'])
+        }
+      )
+    }
   }
 }

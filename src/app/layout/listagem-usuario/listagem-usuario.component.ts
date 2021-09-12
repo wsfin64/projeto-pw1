@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Usuario} from "../../shared/model/usuario";
-import {UsuarioService} from "../../shared/services/usuario.service";
+import {UsuarioFirestoreService} from "../../shared/services/usuario-firestore.service";
 
 @Component({
   selector: 'app-listagem-usuario',
@@ -11,11 +11,11 @@ export class ListagemUsuarioComponent implements OnInit {
 
   usuarios!: Array<Usuario>;
 
-  constructor(private usuarioService: UsuarioService) {
+  constructor(private usuarioFirestoreService: UsuarioFirestoreService) {
   }
 
   ngOnInit(): void {
-    this.usuarioService.listar().subscribe(
+    this.usuarioFirestoreService.listar().subscribe(
       usuariosResposta => this.usuarios = usuariosResposta
     );
   }

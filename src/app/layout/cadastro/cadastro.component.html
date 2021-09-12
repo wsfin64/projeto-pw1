@@ -38,6 +38,12 @@
         <mat-icon matSuffix>create</mat-icon>
       </mat-form-field>
 
+      <mat-form-field appearance="fill" class="mat-form-principal">
+        <mat-label>Endereço</mat-label>
+        <input matInput [(ngModel)]="usuario.endereco" placeholder="digite seu endereco">
+        <mat-icon matSuffix>create</mat-icon>
+      </mat-form-field>
+
       <mat-form-field appearance="fill" class="mat-form-field">
         <mat-label>Enter your email</mat-label>
         <input matInput [(ngModel)]="usuario.email" placeholder="pat@example.com" [formControl]="email" required>

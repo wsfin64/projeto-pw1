@@ -13,6 +13,7 @@ import {FormsModule} from "@angular/forms";
 import {RouterModule} from "@angular/router";
 import {AppRoutingModule} from "./app-routing.module";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
+import {FirestoreModule} from "./firestore/firestore.module";
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
         RouterModule,
         AppRoutingModule,
         HttpClientModule,
+        FirestoreModule
 
     ],
   providers: [],
